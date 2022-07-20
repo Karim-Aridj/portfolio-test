@@ -49,21 +49,15 @@ nav ul li a:hover{
 }
 .content{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
     top: 40%;
-    left: 6%;
-    
-    
-
+    left: 5%;
+    transform: translateY(-50%);
 
 }
 h1{
     color: white;
     margin: 20px 0px 20px;
-    font-size: 70px;
+    font-size: 60px;
 }
 h2{
     color: white;
@@ -74,4 +68,37 @@ h4{
     color: beige;
     letter-spacing: 2px;
     font-size: 25px;
+}
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: rgba(201,175,200,255);
+}
+.about img{
+    height: auto;
+    width: 430px;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color: white;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
 }
