@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/style.css">
-    <meta name="description" content="Karim is a web developer creating his portfolio for a test">
-    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    
     <title>Web developer Portfolio | Abdelkarim Aridj</title>
      
 </head>
 <body> 
-<!--hero Section -->
-
-    <div class="hero">
-         <nav>
+    <!--hero section-->
+    <Section class="hero">
+        <nav>
             <h2 class="logo">Karim dev <span>Portfolio</span></h2>
             <ul>
                 <li><a href="#Home">Home</a></li>
@@ -28,6 +25,7 @@
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
+    </Section>
         
         <div class="content">
             <h4>Hi My Name is</h4>
@@ -38,19 +36,99 @@
         <!--about section-->
         
         
-    <section class="about">
-        <div class="main">
-            <img src="/img/karim-portfolio.jpg" alt="">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <h5>Developer and Marketer</h5>
-                <p>I am a Marketer who will become a Developer. I can Provide you with Amazing Lorem ipsum dolor 
-                    sit amet consectetur adipisicing elit.
-                    Quia atue corporis hic omnis officiis consequuntur nihil vero natus cupiditate voluptas distinctio, 
-                    dolor adipisci quo architecto placeat eaque. Corrupti, cumque impedit!</p>
-                    <button>Let's Talk</button>
+        <section class="about">
+            <div class="main">
+                <img src="img/karim-portfolio.jpg">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <h5>Developer <span>& Marketer</span></h5>
+                    <p>I am a web developer . I can provide clean Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste laudantium similique beatae dolorum vitae ipsa expedita laboriosam quidem accusantium placeat magni facere nostrum unde, veniam dignissimos dolorem porro est commodi.</p>
+                    <button type="button">Let's Talk</button>
+                </div>
             </div>
-         </div>
-    </section>
+        </section>
+
+        <!--Blog Section-->
+        <section class="blog">
+            <div class="title">
+                <h2>Latest Blog Posts</h2>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h5>Front End</h5>
+                    <div class="pewdipie">
+                    <p>Lorem ipsum dolor sit ameLorem ipsum dolor sit ameLorem ipsum dolor sit ame</p>
+                    <p style="text-align: center;">
+                        <a href="#" class="button">Read More</a>
+                    </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-server"></i>
+                    <h5>Back End</h5>
+                    <div class="pewdipie">
+                        <p>Lorem ipsum dolor sit ameLorem ipsum dolor sit ameLorem ipsum dolor sit ame</p>
+                    <p style="text-align: center;">
+                        <a href="#" class="button">Read More</a>
+                    </p>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h5>Full Stack</h5>
+                    <div class="pewdipie">
+                    <p>Lorem ipsum dolor sit ameLorem ipsum dolor sit ameLorem ipsum dolor sit ame</p>
+                    <p style="text-align: center;">
+                        <a href="#" class="button">Read More</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!--Resume section-->
+        <section class="resume">
+            <p>You can click here to download my Resume.</p>
+            <a class="button-zwei" href="#">Resume</a>
+        </section>
+
+        <!--contact section-->
+        <section class="contact-form">
+            <div class="form-wrapper">
+                <header class="form-head">
+                    <h2>Contact Me</h2>
+                </header>
+                <form action="">
+                    <div class="name-form">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="email-form">
+                        <label for="email">Email:</label>
+                        <input type="email">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer>
+            <p>Abdelkarim Aridj</p>
+            <p>Going through a journey to become a full stack js that requires HTML, CSS, JavaScript
+                Node.js and much more!
+            </p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">CopyRight by Abdelkarim Aridj</p>
+        </footer>
+
+
+
+
 </body>
 </html>
