@@ -1,4 +1,3 @@
-// main.js
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -49,30 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(this);
-            // Add your form submission logic here
             console.log('Form submitted:', Object.fromEntries(formData));
             this.reset();
         });
     }
 
-    // Mobile menu toggle
-    const createMobileMenu = () => {
-        const navbar = document.querySelector('.navbar');
-        const burger = document.createElement('div');
-        burger.className = 'burger';
-        burger.innerHTML = '☰';
-        burger.style.cursor = 'pointer';
-        burger.style.fontSize = '1.5rem';
-        burger.style.color = 'white';
-        
-        burger.addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
-        
-        navbar.appendChild(burger);
-    };
-
-    // Initialize all animations and functionality
+    // Initialize animations
     animateStats();
-    createMobileMenu();
 });
