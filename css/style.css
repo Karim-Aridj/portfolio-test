@@ -1,12 +1,64 @@
-/* Add smooth scrolling */
+:root {
+    --primary-color: #2a2a2a;
+    --accent-color: #4a90e2;
+    --text-color: #333;
+    --background-color: #fff;
+    --gradient: linear-gradient(135deg, #4a90e2, #2a2a2a);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Enhanced hero section */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
 .hero {
     position: relative;
-    background: linear-gradient(135deg, #4a90e2, #2a2a2a);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 2rem;
     overflow: hidden;
 }
 
@@ -20,63 +72,117 @@ html {
     animation: backgroundMove 20s linear infinite;
 }
 
-/* Animated scroll indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 50px;
-    border: 2px solid white;
-    border-radius: 15px;
-}
-
-.scroll-indicator::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: white;
+.profile-image {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    transform: translateX(-50%);
-    animation: scrollIndicator 2s infinite;
-}
-
-/* Project card enhancements */
-.project-card {
-    position: relative;
     overflow: hidden;
+    margin: 0 auto 2rem;
+    border: 4px solid var(--accent-color);
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(74, 144, 226, 0.9);
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.projects {
+    padding: 5rem 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.expertise {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-items {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.project-card:hover .project-overlay {
-    opacity: 1;
+.skill-items span {
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
-/* Animations */
+.contact {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#hubspot-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
 @keyframes backgroundMove {
     from { transform: translateX(0) translateY(0); }
     to { transform: translateX(-100%) translateY(-100%); }
-}
-
-@keyframes scrollIndicator {
-    0% { transform: translate(-50%, 0); opacity: 1; }
-    75% { transform: translate(-50%, 20px); opacity: 0; }
-    100% { transform: translate(-50%, 0); opacity: 1; }
 }
