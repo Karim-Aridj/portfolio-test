@@ -67,7 +67,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('/img/coding-background-hero-image.jpg');
+    background: url('https://res.cloudinary.com/dxblsw5ct/image/upload/v1737039866/pexels-sparrow-jack-724225580-18991748_nmps7o.jpg');
     opacity: 0.1;
     animation: backgroundMove 20s linear infinite;
 }
