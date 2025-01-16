@@ -64,7 +64,7 @@ body {
 
 .hero::before {
     content: '';
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     background: url('https://res.cloudinary.com/dxblsw5ct/image/upload/v1737039866/pexels-sparrow-jack-724225580-18991748_nmps7o.jpg');
