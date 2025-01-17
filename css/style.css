@@ -98,6 +98,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 /* Project Section */
 .work {
     padding: 6rem 0;
@@ -137,8 +138,14 @@ body {
     object-fit: contain;
 }
 
+.location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
 .project-metrics {
     padding: 1rem;
+    cursor: pointer;
 }
 
 .metrics-image {
@@ -149,7 +156,27 @@ body {
 }
 
 .metrics-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+.expanded-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+.expanded-image img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
 }
 
 .project-content {
@@ -176,43 +203,10 @@ body {
     color: var(--accent-color);
 }
 
-.landing-pages {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-}
-
-.landing-pages h4 {
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-}
-
-.landing-pages ul {
-    list-style: none;
-}
-
-.landing-pages a {
-    color: var(--accent-color);
-    text-decoration: none;
-    display: inline-block;
-    margin: 0.5rem 0;
-    transition: color 0.3s ease;
-}
-
-.landing-pages a:hover {
-    color: var(--primary-color);
-}
-
 /* Testimonials Section */
 .testimonials {
     padding: 6rem 0;
     background: white;
-}
-
-.testimonial-slider {
-    max-width: 800px;
-    margin: 3rem auto;
-    position: relative;
 }
 
 .testimonial {
@@ -230,13 +224,13 @@ body {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
 }
 
 .testimonial p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: var(--text-color);
 }
 
 .testimonial cite {
@@ -251,6 +245,21 @@ body {
     font-size: 0.9rem;
     color: #666;
     margin-top: 0.25rem;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1.5rem auto 0;
+    border: 3px solid var(--accent-color);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .testimonial-dots {
@@ -389,19 +398,8 @@ footer {
     .testimonial p {
         font-size: 1rem;
     }
-    .testimonial-image {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 0 auto 1.5rem;
-        border: 3px solid var(--accent-color);
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
     }
-    
-    .testimonial-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
 }

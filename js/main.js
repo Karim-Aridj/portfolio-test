@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 200
     });
 
-    // Testimonial slider
+    // Testimonial slider functionality
     const testimonials = document.querySelectorAll('.testimonial');
     const dotsContainer = document.querySelector('.testimonial-dots');
     let currentTestimonial = 0;
 
-    // Create dots
+    // Create dots for testimonials
     testimonials.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         showTestimonial(currentTestimonial);
     }, 5000);
 
-    // Smooth scrolling
+    // Initialize first testimonial
+    showTestimonial(0);
+
+    // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -76,4 +79,82 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
+
+    // Image expansion functionality
+    function expandImage(image) {
+        const expandedDiv = document.createElement('div');
+        expandedDiv.className = 'expanded-image';
+        
+        const expandedImg = document.createElement('img');
+        expandedImg.src = image.src;
+        
+        expandedDiv.appendChild(expandedImg);
+        document.body.appendChild(expandedDiv);
+        
+        // Prevent body scrolling when image is expanded
+        document.body.style.overflow = 'hidden';
+        
+        expandedDiv.onclick = function() {
+            document.body.removeChild(expandedDiv);
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.body.removeChild(expandedDiv);
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    // Add click handler to all metrics images
+    document.querySelectorAll('.metrics-image').forEach(img => {
+        img.addEventListener('click', function() {
+            expandImage(this);
+        });
+    });
+
+    // Navbar scroll effect
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+            navbar.classList.remove('scroll-up');
+            return;
+        }
+
+        if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
+            // Scroll Down
+            navbar.classList.remove('scroll-up');
+            navbar.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
+            // Scroll Up
+            navbar.classList.remove('scroll-down');
+            navbar.classList.add('scroll-up');
+        }
+        lastScroll = currentScroll;
+    });
 });
+
+// Make expandImage function globally available
+window.expandImage = function(image) {
+    const expandedDiv = document.createElement('div');
+    expandedDiv.className = 'expanded-image';
+    
+    const expandedImg = document.createElement('img');
+    expandedImg.src = image.src;
+    
+    expandedDiv.appendChild(expandedImg);
+    document.body.appendChild(expandedDiv);
+    
+    document.body.style.overflow = 'hidden';
+    
+    expandedDiv.onclick = function() {
+        document.body.removeChild(expandedDiv);
+        document.body.style.overflow = 'auto';
+    }
+};
