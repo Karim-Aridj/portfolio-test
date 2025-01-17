@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close on escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape' && document.querySelector('.expanded-image')) {
                 document.body.removeChild(expandedDiv);
                 document.body.style.overflow = 'auto';
             }
@@ -128,15 +128,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
-            // Scroll Down
+            // Scroll Down - hide navbar
             navbar.classList.remove('scroll-up');
             navbar.classList.add('scroll-down');
         } else if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
-            // Scroll Up
+            // Scroll Up - show navbar
             navbar.classList.remove('scroll-down');
             navbar.classList.add('scroll-up');
         }
         lastScroll = currentScroll;
+    });
+
+    // Loading optimization
+    window.addEventListener('load', () => {
+        // Add loaded class to body
+        document.body.classList.add('loaded');
+        
+        // Lazy load images that are off screen
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        if ('loading' in HTMLImageElement.prototype) {
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => lazyImageObserver.observe(img));
+        }
     });
 });
 
