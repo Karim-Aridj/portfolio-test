@@ -202,6 +202,37 @@ body {
 .project-content ul li i {
     color: var(--accent-color);
 }
+.content-created {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.content-created h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.content-created ul {
+    list-style: none;
+}
+
+.content-created ul li {
+    margin: 0.5rem 0;
+}
+
+.content-created a {
+    color: var(--accent-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.content-created a:hover {
+    color: var(--primary-color);
+}
 
 /* Testimonials Section */
 .testimonials {
