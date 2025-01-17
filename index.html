@@ -4,93 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SEO & Growth Marketing Specialist - Abdelkarim Aridj | Driving 113% Search Traffic Growth">
+    <meta name="keywords" content="SEO specialist, digital marketing, growth marketing, B2B marketing, B2C marketing">
+    <meta property="og:title" content="Abdelkarim Aridj - Digital Marketing Portfolio">
+    <meta property="og:description" content="SEO & Growth Marketing Specialist with proven track record of 113% search traffic increase">
+    <meta property="og:image" content="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737039571/karim-portfolio_oym7jm.jpg">
     <title>Abdelkarim Aridj | Digital Marketing Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Abdelkarim</h1>
-            <p class="hero-text">For the past 6 years, I have driven exceptional digital marketing results across B2B and B2C sectors, specializing in SEO and growth marketing. From achieving 113% search traffic increase to managing multi-country campaigns, I help businesses unlock their digital potential through data-driven strategies.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">AA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Hi, I'm Abdelkarim</h1>
+                <p class="hero-text">For the past 6 years, I have driven exceptional digital marketing results across B2B and B2C sectors, specializing in SEO and growth marketing. From achieving 113% search traffic increase to managing multi-country campaigns, I help businesses unlock their digital potential through data-driven strategies.</p>
+                <div class="hero-stats">
+                    <div class="stat" data-value="113">
+                        <span class="number">0%</span>
+                        <span class="label">Search Traffic Growth</span>
+                    </div>
+                    <div class="stat" data-value="70">
+                        <span class="number">0%</span>
+                        <span class="label">Organic Growth</span>
+                    </div>
+                    <div class="stat" data-value="40">
+                        <span class="number">0%</span>
+                        <span class="label">Revenue Increase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737039571/karim-portfolio_oym7jm.jpg" 
+                     alt="Abdelkarim Aridj" 
+                     loading="eager">
+            </div>
         </div>
     </header>
 
+    <!-- Projects Section -->
     <section id="work" class="work">
         <div class="container">
-            <h2>Work I'm Proud Of</h2>
-            <div class="work-grid">
-                <div class="work-card bayzat">
-                    <h3>Bayzat.com</h3>
-                    <span class="duration">Oct 2022 - Present | Dubai (Remote)</span>
-                    <ul>
-                        <li>113% increase in organic search traffic</li>
-                        <li>70% organic traffic growth in 8 months</li>
-                        <li>40% revenue increase from organic leads</li>
-                        <li>60% improvement in core web vitals</li>
-                    </ul>
+            <h2 data-aos="fade-up">Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Bayzat Project -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737087261/bayzat%20logo.png" 
+                             alt="Bayzat Logo" 
+                             class="project-logo"
+                             loading="lazy">
+                        <span class="duration">Oct 2022 - Present | Dubai (Remote)</span>
+                    </div>
+                    <div class="project-metrics">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737079715/Bayzat.com.png" 
+                             alt="Bayzat Growth Metrics" 
+                             class="metrics-image"
+                             loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li><i class="fas fa-chart-line"></i> 113% increase in organic search traffic</li>
+                            <li><i class="fas fa-chart-bar"></i> 70% organic traffic growth in 8 months</li>
+                            <li><i class="fas fa-dollar-sign"></i> 40% revenue increase from organic leads</li>
+                            <li><i class="fas fa-tachometer-alt"></i> 60% improvement in core web vitals</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="work-card evercam">
-                    <h3>Evercam.io</h3>
-                    <span class="duration">Jan 2021 - Sep 2022 | Ireland (Remote)</span>
-                    <ul>
-                        <li>Multi-country SEO implementation</li>
-                        <li>Cross-channel campaign management</li>
-                        <li>Regional content strategy development</li>
-                        <li>Multi-website performance optimization</li>
-                    </ul>
+
+                <!-- Evercam Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737087095/evercam%20logo.png" 
+                             alt="Evercam Logo" 
+                             class="project-logo"
+                             loading="lazy">
+                        <span class="duration">Jan 2021 - Sep 2022 | Ireland (Remote)</span>
+                    </div>
+                    <div class="project-metrics">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737079715/evercam.io.png" 
+                             alt="Evercam Growth Metrics" 
+                             class="metrics-image"
+                             loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li><i class="fas fa-globe"></i> Multi-country SEO implementation</li>
+                            <li><i class="fas fa-bullseye"></i> Cross-channel campaign management</li>
+                            <li><i class="fas fa-code"></i> Multi-website optimization</li>
+                        </ul>
+                        <div class="landing-pages">
+                            <h4>Notable Landing Pages:</h4>
+                            <ul>
+                                <li><a href="https://evercam.io/construction-cameras/" target="_blank">Construction Cameras</a></li>
+                                <li><a href="https://evercam.com/construction-site-cameras" target="_blank">Construction Site Cameras</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="work-card harbin">
-                    <h3>Harbin (E-Hailing app)</h3>
-                    <span class="duration">July 2020 - Jan 2021 | Algiers</span>
-                    <ul>
-                        <li>Implemented brand's Marketing policy</li>
-                        <li>Led SEO, SEM, and ASO strategy</li>
-                        <li>Created and optimized WordPress website</li>
-                        <li>Optimized app store presence</li>
-                    </ul>
-                </div>
-                <div class="work-card bessa">
-                    <h3>Bessa Real Estate Development</h3>
-                    <span class="duration">Apr 2019 - Jun 2020 | Algiers</span>
-                    <ul>
-                        <li>Generated 5000+ qualified leads</li>
-                        <li>Increased company turnover by 30%</li>
-                        <li>Generated 60% of sales through digital ads</li>
-                        <li>Achieved 25% increase in user retention</li>
-                        <li>Created content strategy with 7% engagement rate</li>
-                    </ul>
+
+                <!-- Bessa Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737086986/bessa%20logo.png" 
+                             alt="Bessa Logo" 
+                             class="project-logo"
+                             loading="lazy">
+                        <span class="duration">Apr 2019 - Jun 2020 | Algiers</span>
+                    </div>
+                    <div class="project-metrics">
+                        <img src="https://res.cloudinary.com/dxblsw5ct/image/upload/v1737079715/Bessa%20Promotion.png" 
+                             alt="Bessa Growth Metrics" 
+                             class="metrics-image"
+                             loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li><i class="fas fa-users"></i> Generated 5000+ qualified leads</li>
+                            <li><i class="fas fa-chart-pie"></i> Increased turnover by 30%</li>
+                            <li><i class="fas fa-ad"></i> 60% of sales through digital channels</li>
+                            <li><i class="fas fa-chart-line"></i> 25% increase in user retention</li>
+                        </ul>
+                        <div class="landing-pages">
+                            <h4>Notable Landing Pages:</h4>
+                            <ul>
+                                <li><a href="https://www.bessapromotion.com/landings/itri" target="_blank">ITRI Project</a></li>
+                                <li><a href="https://www.bessapromotion.com/landings/avena" target="_blank">AVENA Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>What People Say</h2>
+            <h2 data-aos="fade-up">What People Say</h2>
             <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"I had the pleasure of working with AbdelKarim, and I can confidently say he is an invaluable asset to any team. His proactive approach ensures that tasks are completed efficiently and with great attention to detail. AbdelKarim is incredibly helpful and always ready to lend a hand, fostering a collaborative and friendly work environment."</p>
-                    <cite>Mayar Elrouhy, Graphic Designer at Bayzat (December 2024)</cite>
+                <div class="testimonial" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"I had the pleasure of working with AbdelKarim, and I can confidently say he is an invaluable asset to any team. His proactive approach ensures that tasks are completed efficiently and with great attention to detail. AbdelKarim is incredibly helpful and always ready to lend a hand, fostering a collaborative and friendly work environment."</p>
+                        <cite>Mayar Elrouhy<span>Graphic Designer at Bayzat (December 2024)</span></cite>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"Karim is a true professional, highly analytical, and results-oriented, and also someone who brings positivity and energy to the workplace. I have no doubt that he will excel in any role he takes on."</p>
-                    <cite>Omar Elkomy, Performance Marketing Expert (November 2024)</cite>
+                <div class="testimonial" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"Karim is a true professional, highly analytical, and results-oriented, and also someone who brings positivity and energy to the workplace. I have no doubt that he will excel in any role he takes on."</p>
+                        <cite>Omar Elkomy<span>Performance Marketing Expert (November 2024)</span></cite>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"He optimized the website and succeeded in improving the company's organic ranking across key regions. His strategic vision and skills were of great help in bringing new leads to Evercam. He is a creative and accomplished SEO specialist."</p>
-                    <cite>Amel Djedouani, Account Manager at Hilti Canada (March 2023)</cite>
+                <div class="testimonial" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"He optimized the website and succeeded in improving the company's organic ranking across key regions. His strategic vision and skills were of great help in bringing new leads to Evercam. He is a creative and accomplished SEO specialist."</p>
+                        <cite>Amel Djedouani<span>Account Manager at Hilti Canada (March 2023)</span></cite>
+                    </div>
                 </div>
             </div>
+            <div class="testimonial-dots"></div>
         </div>
     </section>
 
+    <!-- Expertise Section -->
     <section id="expertise" class="expertise">
         <div class="container">
-            <h2>Skills & Services</h2>
+            <h2 data-aos="fade-up">Skills & Services</h2>
             <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h3>SEO & Analytics</h3>
+                <div class="expertise-card" data-aos="fade-up">
+                    <h3><i class="fas fa-search"></i> SEO & Analytics</h3>
                     <ul>
                         <li>Technical SEO optimization</li>
                         <li>Multi-country SEO implementation</li>
@@ -98,8 +197,8 @@
                         <li>Data analysis & reporting</li>
                     </ul>
                 </div>
-                <div class="expertise-card">
-                    <h3>Growth Marketing</h3>
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-chart-line"></i> Growth Marketing</h3>
                     <ul>
                         <li>Multi-channel campaign management</li>
                         <li>CRO & A/B testing</li>
@@ -107,8 +206,8 @@
                         <li>Marketing automation</li>
                     </ul>
                 </div>
-                <div class="expertise-card">
-                    <h3>Technical Expertise</h3>
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-code"></i> Technical Expertise</h3>
                     <ul>
                         <li>HTML/CSS/JavaScript</li>
                         <li>CRM systems (Hubspot, Salesforce)</li>
@@ -120,15 +219,16 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Let's Connect</h2>
-            <div class="contact-info">
-                <p>📍 Lisbon, Portugal</p>
-                <p>📧 Abdelkarim.Aridj@proton.me</p>
-                <p>📱 +351920687775</p>
+            <h2 data-aos="fade-up">Let's Connect</h2>
+            <div class="contact-info" data-aos="fade-up">
+                <p><i class="fas fa-map-marker-alt"></i> Lisbon, Portugal</p>
+                <p><i class="fas fa-envelope"></i> Abdelkarim.Aridj@proton.me</p>
+                <p><i class="fas fa-phone"></i> +351920687775</p>
             </div>
-            <div id="hubspot-form">
+            <div id="hubspot-form" data-aos="fade-up">
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
                 <script>
                     hbspt.forms.create({
@@ -139,5 +239,14 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Abdelkarim Aridj. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
