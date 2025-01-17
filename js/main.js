@@ -1,10 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize AOS
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 200
-    });
+    // Testimonial slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach(t => t.classList.remove('active'));
+        testimonials[index].classList.add('active');
+    }
+
+    // Auto-rotate testimonials
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 5000);
+
+    // Initialize first testimonial
+    showTestimonial(0);
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -15,40 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // Animate stats on scroll
-    const animateStats = () => {
-        const stats = document.querySelectorAll('.stat .number');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const stat = entry.target;
-                    const value = parseInt(stat.getAttribute('data-value'));
-                    let current = 0;
-                    const increment = value / 60;
-                    const updateCount = () => {
-                        if(current < value) {
-                            current += increment;
-                            stat.textContent = Math.round(current) + '%';
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            stat.textContent = value + '%';
-                        }
-                    };
-                    updateCount();
-                    observer.unobserve(stat);
-                }
-            });
-        }, {threshold: 0.5});
-
-        stats.forEach(stat => {
-            const value = stat.textContent;
-            stat.setAttribute('data-value', value.replace('%', ''));
-            stat.textContent = '0%';
-            observer.observe(stat);
-        });
-    };
-
-    // Initialize animations
-    animateStats();
 });
