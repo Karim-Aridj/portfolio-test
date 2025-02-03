@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
     stats.forEach(stat => statsObserver.observe(stat));
 
     function animateValue(element, start, end, duration) {
+        // Ensure end value is a clean integer
+        end = parseInt(end.toString().replace('%', ''));
+        
+        if (isNaN(end)) {
+            console.error('Invalid end value');
+            return;
+        }
+    
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
@@ -79,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
+    
 
     // Image expansion functionality
     function expandImage(image) {
