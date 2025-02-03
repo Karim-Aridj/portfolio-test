@@ -67,41 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
     stats.forEach(stat => statsObserver.observe(stat));
 
     function animateValue(element, start, end, duration) {
-        // Ensure we have a clean integer value
-        const targetValue = parseInt(end);
+        // Ensure end value is a clean integer
+        end = parseInt(end.toString().replace('%', ''));
         
+        if (isNaN(end)) {
+            console.error('Invalid end value');
+            return;
+        }
+    
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const currentValue = Math.floor(progress * (targetValue - start) + start);
-            element.textContent = `${currentValue}%`;
-            
+            const value = Math.floor(progress * (end - start) + start);
+            element.textContent = `${value}%`;
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             }
         };
         window.requestAnimationFrame(step);
     }
-    
-    // Stats observer
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const stat = entry.target;
-                const value = parseInt(stat.dataset.value);
-                if (!isNaN(value)) {
-                    animateValue(stat.querySelector('.number'), 0, value, 2000);
-                    statsObserver.unobserve(stat);
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    // Observe all stat elements
-    document.querySelectorAll('.stat').forEach(stat => {
-        statsObserver.observe(stat);
-    });
     
     
 
