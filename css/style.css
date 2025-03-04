@@ -232,6 +232,57 @@ body {
     color: var(--accent-color);
 }
 
+/* Project Details Section */
+.project-details {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.project-details h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.project-details h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+.project-details h3 {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    margin-top: 1.5rem;
+}
+
+.project-details p {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+thead th {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem;
+}
+
+tbody td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
 .content-created,
 .landing-pages {
     margin-top: 2rem;
